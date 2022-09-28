@@ -1,0 +1,318 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:auto;
+}
+
+.headerContainer{
+    width:auto;
+    background-color: #2A282A;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 170px;
+    height:70px;
+}
+
+.firstButtons{
+    background-color: transparent;
+    border:none;
+    color:white;
+    padding:15px 20px;
+    cursor:pointer;
+    transition:0.4s;
+    line-height: 3px;
+    font-size:15px;
+}
+
+.firstButtons:hover{
+    color:#FF0043;
+}
+
+#title{
+    font-size:30px;
+    font-weight:bold;
+    line-height:40px;
+}
+
+.introduction{
+    width:auto;
+    text-align: center;
+    color:#2A282A;
+    padding:15px;
+    font-weight:lighter;
+    line-height: 40px;
+}
+
+.sportsTitle{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.sports{
+    display:grid;  
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "mainSports mainSports mainSports otherCathegories"
+        "mainSports mainSports mainSports otherCathegories"
+        "mainSports mainSports mainSports otherCathegories"
+}
+
+.mainSports{
+    display:grid;  
+    grid-template-columns: repeat(3, 1fr);
+    gap:20px;
+    grid-area:mainSports;
+    grid-template-areas: 
+        "card1 card2 card3 otherImages"
+        "card4 card5 card6 otherImages"
+        "card7 card8 card9 otherImages"
+}
+
+.sportImage{
+    max-height:300px;
+    width:100%;
+    border-radius:10px;
+}
+
+.cards{
+    width:100%;
+    margin-bottom:20px;
+    cursor:pointer;
+    padding:10px;
+    text-align: justify;
+    font-size:14px;
+    transition: 0.4s;
+}
+
+.cards:hover{
+    border:2px solid #2A282A;
+    border-radius:10px;
+}
+
+.card1{
+    grid-area: card1;
+}
+
+.card2{
+    grid-area: card2;
+}
+
+.card3{
+    grid-area: card3;
+}
+
+.card4{
+    grid-area: card4;
+}
+
+.card5{
+    grid-area: card5;
+}
+
+.card6{
+    grid-area: card6;
+}
+
+.card7{
+    grid-area: card7;
+}
+
+.card8{
+    grid-area: card8;
+}
+
+.card9{
+    grid-area: card9;
+}
+
+.secondTitle{
+    font-size:25px;
+}
+
+.otherCathegories{
+    height:auto;
+    text-align: center;
+    background-color: #2A282A;
+    color:white;
+    padding:30px 0px;
+}
+
+.otherImages img{
+    max-height:250px;
+    width:80%;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.otherImages{
+    text-align: center;
+    transition:0.4s;
+    font-size:15px;
+    background-color: #2A282A;
+    padding: 25px 5px;
+}
+
+.otherImages img:hover{
+    border:2px solid white;
+}
+
+
+.footer{
+    background-color: #2A282A;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px;
+    margin-top:15px;
+    color:white;
+}
+
+.top button{
+        background-color: transparent;
+        border:none;
+        color:white;
+        font-size:15px;
+        padding:15px 20px;
+        cursor:pointer;
+        transition:0.4s;
+        line-height: 3px;
+ }
+    
+.top button:hover{
+        color:#FF0043;
+    }
+
+
+/*MEDIA*/
+
+@media (max-width:768px){
+    .sports{
+        display:grid;  
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "mainSports mainSports otherCathegories"
+            "mainSports mainSports otherCathegories"
+            "mainSports mainSports otherCathegories"
+            "mainSports mainSports otherCathegories"
+    }
+
+    .mainSports{
+        display:grid;  
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "card1 card2 otherImages"
+            "card3 card4 otherImages"
+            "card5 card6 otherImages"
+            "card7 card8 otherImages"
+            "card9 card9 otherImages"
+    }
+
+    .secondTitle{
+        font-size:20px;
+    }
+
+    .introduction p{
+        line-height: 20px;
+    }
+}
+
+@media (max-width:600px){
+    .sports{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+
+    .mainSports{
+        display:flex;
+        flex-direction:row;
+        flex-wrap:wrap;
+    }
+
+    .otherCathegories{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+    }
+
+    .secondTitle{
+        font-size:30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+}
+
+@media(max-width:481px){
+    #title{
+        font-size:25px;
+    }
+
+    .secondTitle{
+        font-size:23px;
+    }
+
+}
+
+@media(max-width:418px){
+    #title{
+        font-size:22px;
+    }
+    .introduction{
+        font-size:14px;
+    }
+
+    .sportsTitle{
+        font-size:18px;
+    }
+
+    .headerContainer{
+        width:auto;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom:15px;
+    }
+
+    .secondTitle{
+        font-size:22px;
+    }
+}
+
+@media(max-width:361px){
+    .firstButtons{
+        font-size:14px;
+    }
+
+    #title{
+        font-size:19px;
+    }
+
+    .sportsTitle{
+        font-size:17px;
+    }
+
+    .cards{
+        font-size:13px;
+    }
+
+    .secondTitle{
+        font-size:19px;
+    }
+
+    .top button{
+        font-size:14px;
+        line-height:20px;
+    }
+}
